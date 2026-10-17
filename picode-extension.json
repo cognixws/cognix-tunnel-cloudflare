@@ -1,0 +1,43 @@
+{
+  "id": "picode-tunnel-cloudflare",
+  "name": "Cloudflare Tunnel",
+  "version": "0.1.0",
+  "apiVersion": 7,
+  "publisher": "COGNIX[WS]",
+  "description": "Reach COGNIX[WS] from any network at your own address through a Cloudflare Tunnel. Nothing to install on the phone; every device still pairs.",
+  "tunnel": {
+    "name": "Cloudflare Tunnel",
+    "kind": "forward",
+    "statusPath": "/status"
+  },
+  "permissions": ["tunnel:route"],
+  "process": {
+    "command": "node",
+    "args": ["${extensionDir}/server/main.mjs"],
+    "settingsCheck": "/settings/check"
+  },
+  "activation": { "instance": true },
+  "settings": [
+    {
+      "key": "token",
+      "label": "Tunnel token",
+      "type": "secret",
+      "required": true,
+      "description": "From Cloudflare: Zero Trust → Networks → Tunnels → your tunnel → Install connector. Stored protected on this computer."
+    },
+    {
+      "key": "hostname",
+      "label": "Public address",
+      "type": "text",
+      "required": true,
+      "description": "The public hostname you added to the tunnel, like pc.example.com."
+    },
+    {
+      "key": "local_port",
+      "label": "Local port",
+      "type": "number",
+      "default": 18445,
+      "description": "In Cloudflare, set the public hostname's service to http://localhost and this port."
+    }
+  ]
+}
