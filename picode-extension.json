@@ -1,22 +1,29 @@
 {
   "id": "picode-tunnel-cloudflare",
   "name": "Cloudflare Tunnel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "apiVersion": 7,
   "publisher": "COGNIX[WS]",
+  "icon": "ui/cloudflare.png",
   "description": "Reach COGNIX[WS] from any network at your own address through a Cloudflare Tunnel. Nothing to install on the phone; every device still pairs.",
   "tunnel": {
     "name": "Cloudflare Tunnel",
     "kind": "forward",
     "statusPath": "/status"
   },
-  "permissions": ["tunnel:route"],
+  "permissions": [
+    "tunnel:route"
+  ],
   "process": {
     "command": "node",
-    "args": ["${extensionDir}/server/main.mjs"],
+    "args": [
+      "${extensionDir}/server/main.mjs"
+    ],
     "settingsCheck": "/settings/check"
   },
-  "activation": { "instance": true },
+  "activation": {
+    "instance": true
+  },
   "settings": [
     {
       "key": "token",
