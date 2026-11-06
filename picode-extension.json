@@ -1,5 +1,6 @@
 {
-  "id": "picode-tunnel-cloudflare",
+  "id": "tunnel-cloudflare",
+  "formerly": ["picode-tunnel-cloudflare"],
   "name": "Cloudflare Tunnel",
   "version": "0.1.1",
   "apiVersion": 7,
