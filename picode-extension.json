@@ -1,7 +1,10 @@
 {
-  "id": "picode-tunnel-cloudflare",
+  "id": "tunnel-cloudflare",
+  "formerly": [
+    "picode-tunnel-cloudflare"
+  ],
   "name": "Cloudflare Tunnel",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "apiVersion": 7,
   "publisher": "COGNIX[WS]",
   "icon": "ui/cloudflare.png",
